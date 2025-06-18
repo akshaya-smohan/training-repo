@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 40px;
+            margin: 0px;
+            padding: 0px;
+            width: 100px;
+            height: 50px;
+            background-color: rgb(211, 209, 209) ;
+            border: 1px solid gray;
+            margin-top: 10px;
+        }
+        input{
+            width: 500px;
+            height: 120px;
+            background-color: rgb(247, 244, 244);
+            border: 2px solid rgb(103, 103, 103);
+            display: block;
+            margin: auto;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 400px; width: 550px; background-color: rgb(238, 237, 237); margin: auto; margin-top: 20px; padding-top: 10px;">
+            <input type="text" id="Display" onclick="displaycalculation()">
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; margin-top: 10px;">
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button onclick="append('/')">/</button>
+            <button onclick="append('*')">X</button>
+            <button onclick="append('4')">4</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button onclick="append('-')">-</button>
+            <button onclick="append('+')">+</button>
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            <button  style=" width: 210px;" onclick="calculation()">=</button>
+            <button onclick="append('.')">.</button>
+            <button onclick="append('0')">0</button>
+            <button onclick="backspace()" style=" width: 156px;">⌫</button>
+            <button onclick="cleardisplay()" style=" width: 156px;">C</button>                        
+            </div>
+        </div>
+    </div>
+    <script>
+        function append(char){
+            document.getElementById('Display').value += char;
+        }
+        function calculation(){
+            const result = document.getElementById('Display');
+            try{
+                result.value = eval(result.value);
+            } catch(error) {
+                result.value = 'Error';
+            }
+
+        }
+        function displaycalculation(){
+            document.getElementById('Display').innerHTML = value;
+        }
+        function backspace(){
+            const display = document.getElementById('Display') ;
+            display.value = display.value.slice(0, -1); 
+        }
+        function cleardisplay(){
+            document.getElementById('Display').value = '';
+        }
+    </script>
+</body>
+</html>

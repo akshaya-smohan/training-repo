@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+</head>
+<body>
+    <div style="display: flex;">
+        <button style="height: 40px; width: 150px;" id="sub">-</button>
+        <p style="height: 40px; width: 50px; border: 1px solid black;margin-top: 0px; text-align: center;" id="demo3"></p>
+        <button style="height: 40px; width: 150px;" id="add">+</button>
+    </div>
+    <button style="height: 40px; width: 150px; margin-left: 100px;" id="reset">Reset</button>
+    <script>
+        let numb = 0;
+        document.getElementById('sub').addEventListener('click', function(){
+            if(numb <=0){
+                numb =0;
+            }
+            else{
+                numb--;
+            }
+            document.getElementById('demo3').innerHTML=numb;
+        });
+        document.getElementById('add').addEventListener('click', function(){
+            numb++;
+            document.getElementById('demo3').innerHTML=numb;
+        });
+        document.getElementById('reset').addEventListener('click', function(){
+            numb = 0;
+            document.getElementById('demo3').innerHTML=numb;
+        });
+        
+        
+    </script>
+</body>
+</html>

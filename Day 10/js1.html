@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    1.Count how many times a button is clicked.
+    <br>
+    <script >        
+        var x=1;
+    </script>
+    <button type="button" onclick="document.getElementById('demo').innerHTML=x++">click me</button>
+    <p id="demo"></p>
+    
+    2.Change the background color of the page when clicking a button.
+    <div id="demo2" style="background-color: aqua; height: 500px; width: 500px;"></div>
+    <button onclick="document.getElementById('demo2').style.backgroundColor='red'">change color</button>
+    <br><br>
+
+    3.Add two numbers entered by the user.
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <script>
+        function addNumber(){
+            let x = parseFloat(document.getElementById('num1').value);
+            let y = parseFloat(document.getElementById('num2').value);
+            let sum = x + y;
+            document.getElementById('demo3').innerHTML=sum
+        }
+    </script>
+    <p id="demo3"></p>
+    <button onclick="addNumber()">Add numbers</button><br><br>
+
+    4.Ask for the user's name and display a personalized greeting.
+    <input type="text" id="name">
+    <script>
+        function greeting(){
+            let name = document.getElementById('name').value;
+            document.getElementById('demo4').innerHTML = 'Hello' +' '+ name;
+        }
+    </script>
+    <p id="demo4"></p>
+    <button onclick="greeting()">Enter</button>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+h2{
+    background-color: blue;
+}
+.sample{
+    background-color: aqua;
+}
+#new{
+    background-color: red;
+}
+.kkk{
+    color: white;
+}
+h5,h6{
+    background-color: black;
+}
+*{
+
+    color: white;
+}
+body{
+    background-image: url('three_simple_landscape_photography_tips_for_shooting_in_grey_and_boring_weather_07.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+
+
+}
+
+ul{
+    background-color: green;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+a{
+    text-decoration: none;
+}
+
+li{
+    padding: 30px;
+   display: inline;
+}

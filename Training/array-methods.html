@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array methods</title>
+</head>
+<body>
+    <!--MAP methods-->
+    <p>creates a new array from calling a function for every array element.</p>
+    <p id="demo1"></p>
+
+    <!--forEach method-->
+    <p>calls function for each element in an array</p>
+    <p id="demo2"></p>
+
+    <script>
+
+        const numb = [65, 40, 35, 20];
+        const newArr = numb.map(myFunction)
+        function myFunction(num){
+            return num*10;
+        }
+        document.getElementById("demo1").innerHTML = newArr;
+
+        let text = "";
+        const fruits = ["orange", "apple", "banana"];
+        fruits.forEach(myfunction1);
+        function myfunction1(item, index){
+            text += index + " : "+ item +"<br>";
+        }
+        document.getElementById("demo2").innerHTML = text;
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    padding: 30px;
+    display: inline;
+}
+.top{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding-bottom: 60px;
+}
+.features{
+    background-color: rgb(233, 231, 231);
+    text-align: center;
+}
+.bordered{
+    border: 1px solid black;
+    padding-bottom: 8px;
+}
+.button{
+    background-color: blue;
+    color: white;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+}
+.cont{
+    padding: 30px;
+    padding-bottom: 100px;
+}
+body{
+    width: 200vh;
+}
